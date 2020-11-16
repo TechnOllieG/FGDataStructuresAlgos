@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="841c370a-51dd-4019-90b3-3c4802ff7cd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../FGDataStructuresAlgos.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntBinaryTree.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LinkedList.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Program.cs" beforeDir="false" />
-    </list>
+    <list default="true" id="841c370a-51dd-4019-90b3-3c4802ff7cd4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,6 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605532363346</updated>
       <workItem from="1605532365859" duration="3402000" />
+      <workItem from="1605553048203" duration="2000" />
     </task>
     <servers />
   </component>
@@ -109,6 +105,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
