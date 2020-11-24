@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="841c370a-51dd-4019-90b3-3c4802ff7cd4" name="Default Changelist" comment="" />
+    <list default="true" id="841c370a-51dd-4019-90b3-3c4802ff7cd4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Console App/FGDataStructuresAlgos/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Console App/FGDataStructuresAlgos/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/VisualizeTree.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/VisualizeTree.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,12 +34,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/FreeDraw/Scripts/Drawable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04258D1C-DC10-4424-8C2A-17A6A31A3CF7/e9/d3b5829e/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BinaryTree.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Console App/FGDataStructuresAlgos/TowerOfHanoi.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04258D1C-DC10-4424-8C2A-17A6A31A3CF7/14/84050811/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/TreeVisualize.cs" />
+        <option value="$PROJECT_DIR$/Assets/TowerOfHanoi.cs" />
+        <option value="$PROJECT_DIR$/Assets/FreeDraw/Scripts/Drawable.cs" />
       </list>
     </option>
   </component>
@@ -87,6 +98,9 @@
       <updated>1605532363346</updated>
       <workItem from="1605532365859" duration="3402000" />
       <workItem from="1605553048203" duration="2000" />
+      <workItem from="1606232267340" duration="8965000" />
+      <workItem from="1606248331140" duration="619000" />
+      <workItem from="1606255176288" duration="1994000" />
     </task>
     <servers />
   </component>
@@ -109,5 +123,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1606232855071">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1606232855071" />
   </component>
 </project>

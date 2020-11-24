@@ -6,8 +6,9 @@ namespace FGDataStructuresAlgos
 	{
 		static void Main(string[] args)
 		{
+			TowerOfHanoi.TOH(3);
 			// LinkedListDemo();
-			BinaryTreeDemo();
+			// BinaryTreeDemo();
 		}
 
 		static void LinkedListDemo()
