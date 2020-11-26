@@ -19,9 +19,11 @@ public struct Chunk
 
 public class WorldGenerator : MonoBehaviour
 {
-    public GameObject blockToSpawn;
+    public GameObject grassBlock;
+    public GameObject dirtBlock;
     public GameObject player;
     public Vector2Int maxWorldSizeInChunks;
+    public float chunkGenerationDelay = 0.2f;
     public int renderDistance = 6;
     public float terrainScale = 1f;
     public float scale = 1f;
@@ -29,11 +31,12 @@ public class WorldGenerator : MonoBehaviour
     public float persistance = 1f;
     public float lacunarity = 1f;
 
-    private int _chunkDimensions = 16;
-    private List<Chunk> _renderedChunks = new List<Chunk>();
+    private const int ChunkDimensions = 16;
+    private readonly List<Chunk> _renderedChunks = new List<Chunk>();
     private Vector2Int _minChunkValue;
     private Vector2Int _maxChunkValue;
-    private Vector2Int _previousChunkCoordinate;
+    private Vector2Int _previousChunkCoordinate = new Vector2Int(int.MaxValue, int.MaxValue);
+    private int _previousRenderDistance;
 
     private void OnValidate()
     {
@@ -49,15 +52,18 @@ public class WorldGenerator : MonoBehaviour
         Vector2Int halfSizeOfWorld = maxWorldSizeInChunks / 2;
         _minChunkValue = -halfSizeOfWorld;
         _maxChunkValue = new Vector2Int(halfSizeOfWorld.x - 1, halfSizeOfWorld.y - 1);
+        _previousRenderDistance = renderDistance;
     }
 
     void Update()
     {
         Vector2Int currentChunkCoordinate = WorldToChunkCoordinates(player.transform.position);
 
-        if (currentChunkCoordinate == _previousChunkCoordinate)
+        if (currentChunkCoordinate == _previousChunkCoordinate && _previousRenderDistance == renderDistance)
             return;
 
+        Debug.Log("Past return message");
+        
         _previousChunkCoordinate = currentChunkCoordinate;
 
         Vector2Int minChunkToGenerate = new Vector2Int(currentChunkCoordinate.x - renderDistance, currentChunkCoordinate.y - renderDistance);
@@ -74,37 +80,42 @@ public class WorldGenerator : MonoBehaviour
             DegenerateChunk(chunk);
         }
 
-        GenerateNeighbourChunks(currentChunkCoordinate, minChunkToGenerate, maxChunkToGenerate);
+        StartCoroutine(GenerateNeighbourChunks(currentChunkCoordinate, minChunkToGenerate, maxChunkToGenerate));
+        StartCoroutine(GenerateNeighbourChunks(minChunkToGenerate, minChunkToGenerate, maxChunkToGenerate));
+        StartCoroutine(GenerateNeighbourChunks(maxChunkToGenerate, minChunkToGenerate, maxChunkToGenerate));
     }
 
     IEnumerator GenerateNeighbourChunks(Vector2Int chunkToGenerate, Vector2Int minChunkToGenerate, Vector2Int maxChunkToGenerate)
     {
-        yield return null;
+        Debug.Log("Generating NeighbourChunks");
         GenerateChunk(chunkToGenerate);
+        yield return new WaitForSeconds(chunkGenerationDelay);
         
         chunkToGenerate.x += 1;
-        CheckX();
-        chunkToGenerate.x -= 1;
-        CheckX();
+        Check();
+        yield return new WaitForSeconds(chunkGenerationDelay);
+        chunkToGenerate.x -= 2;
+        Check();
+        yield return new WaitForSeconds(chunkGenerationDelay);
         
         chunkToGenerate.y += 1;
-        CheckY();
-        chunkToGenerate.y -= 1;
-        CheckY();
+        Check();
+        yield return new WaitForSeconds(chunkGenerationDelay);
+        chunkToGenerate.y -= 2;
+        Check();
+        yield return new WaitForSeconds(chunkGenerationDelay);
 
-        void CheckX()
+        void Check()
         {
-            if (chunkToGenerate.x > maxChunkToGenerate.x || chunkToGenerate.x < minChunkToGenerate.x)
+            if (IsChunkOutsideWorldBounds() || IsChunkGeneratedAlready())
                 return;
             StartCoroutine(GenerateNeighbourChunks(chunkToGenerate, minChunkToGenerate, maxChunkToGenerate));
         }
 
-        void CheckY()
-        {
-            if (chunkToGenerate.y > maxChunkToGenerate.y || chunkToGenerate.y < minChunkToGenerate.y)
-                return;
-            GenerateNeighbourChunks(chunkToGenerate, minChunkToGenerate, maxChunkToGenerate);
-        }
+        bool IsChunkOutsideWorldBounds() => chunkToGenerate.x > maxChunkToGenerate.x || chunkToGenerate.x < minChunkToGenerate.x ||
+                                           chunkToGenerate.y > maxChunkToGenerate.y || chunkToGenerate.y < minChunkToGenerate.y;
+
+        bool IsChunkGeneratedAlready() => _renderedChunks.FindIndex(a => a.chunkCoordinates == chunkToGenerate) != -1;
     }
 
     void GenerateChunk(Vector2Int chunkToGenerate)
@@ -117,11 +128,11 @@ public class WorldGenerator : MonoBehaviour
             return;
 
         Vector2 tempOffset = Mathfs.Remap(_minChunkValue, _maxChunkValue, Vector2.zero, 
-            maxWorldSizeInChunks * _chunkDimensions, chunkToGenerate);
+            maxWorldSizeInChunks * ChunkDimensions, chunkToGenerate);
 
         Vector2Int offset = new Vector2Int {x = Convert.ToInt32(tempOffset.x), y = Convert.ToInt32(tempOffset.y)};
 
-        float[,] noiseMap = PerlinNoise.Generate(_chunkDimensions, _chunkDimensions, scale, octaves, persistance, lacunarity, offset.x, offset.y);
+        float[,] noiseMap = PerlinNoise.Generate(ChunkDimensions, ChunkDimensions, scale, octaves, persistance, lacunarity, offset.x, offset.y);
 
         Chunk newChunk = new Chunk(chunkToGenerate, new GameObject());
         newChunk.chunkObjects.transform.parent = transform;
@@ -130,7 +141,8 @@ public class WorldGenerator : MonoBehaviour
         {
             for (int y = 0; y < noiseMap.GetLength(1); y++)
             {
-                Instantiate(blockToSpawn, new Vector3(x, Convert.ToInt32(noiseMap[x, y] * terrainScale),y), Quaternion.identity, newChunk.chunkObjects.transform);
+                Instantiate(grassBlock, new Vector3(x + chunkToGenerate.x * ChunkDimensions, Convert.ToInt32(noiseMap[x, y] * terrainScale),y + chunkToGenerate.y * ChunkDimensions), Quaternion.identity, newChunk.chunkObjects.transform);
+                Instantiate(dirtBlock, new Vector3(x + chunkToGenerate.x * ChunkDimensions, Convert.ToInt32(noiseMap[x, y] * terrainScale) - 1,y + chunkToGenerate.y * ChunkDimensions), Quaternion.identity, newChunk.chunkObjects.transform);
             }
         }
         
@@ -153,7 +165,7 @@ public class WorldGenerator : MonoBehaviour
 
     public Vector2Int WorldToChunkCoordinates(Vector3 coords)
     {
-        Vector2Int chunkCoordinate = new Vector2Int(Convert.ToInt32(coords.x / 16), Convert.ToInt32(coords.z / 16));
+        Vector2Int chunkCoordinate = new Vector2Int(Convert.ToInt32(coords.x / ChunkDimensions), Convert.ToInt32(coords.z / ChunkDimensions));
         if (coords.x < 0 && coords.x > -16)
             chunkCoordinate.x = -1;
         

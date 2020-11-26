@@ -244,10 +244,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a214e7cf99f6a974cb6d3fc60ffaffee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockToSpawn: {fileID: 2458934422183538890, guid: a1d6c2f297640004cad97872c69c9ce8, type: 3}
+  grassBlock: {fileID: 2458934422183538890, guid: a1d6c2f297640004cad97872c69c9ce8, type: 3}
+  dirtBlock: {fileID: 281431933661096039, guid: 7b97e851ecbfaea4fad20e0099529733, type: 3}
   player: {fileID: 1894793364}
   maxWorldSizeInChunks: {x: 50, y: 50}
-  renderDistance: 6
+  chunkGenerationDelay: 0
+  renderDistance: 3
   terrainScale: 3
   scale: 13.1
   octaves: 11
