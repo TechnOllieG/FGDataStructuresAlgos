@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Freya;
 using FutureGames.Lib;
 using UnityEngine;
+using Random = System.Random;
 
 public struct Chunk
 {
@@ -19,8 +20,12 @@ public struct Chunk
 
 public class WorldGenerator : MonoBehaviour
 {
+    public int seed;
+    public double treeChance = 0.1f;
     public GameObject grassBlock;
     public GameObject dirtBlock;
+    public GameObject woodBlock;
+    public GameObject leafBlock;
     public GameObject player;
     public Vector2Int maxWorldSizeInChunks;
     public float chunkGenerationDelay = 0.2f;
@@ -37,6 +42,8 @@ public class WorldGenerator : MonoBehaviour
     private Vector2Int _maxChunkValue;
     private Vector2Int _previousChunkCoordinate = new Vector2Int(int.MaxValue, int.MaxValue);
     private int _previousRenderDistance;
+    private Vector2Int _minChunkToGenerate;
+    private Vector2Int _maxChunkToGenerate;
 
     private void OnValidate()
     {
@@ -62,32 +69,29 @@ public class WorldGenerator : MonoBehaviour
         if (currentChunkCoordinate == _previousChunkCoordinate && _previousRenderDistance == renderDistance)
             return;
 
-        Debug.Log("Past return message");
-        
         _previousChunkCoordinate = currentChunkCoordinate;
 
-        Vector2Int minChunkToGenerate = new Vector2Int(currentChunkCoordinate.x - renderDistance, currentChunkCoordinate.y - renderDistance);
-        Vector2Int maxChunkToGenerate = new Vector2Int(currentChunkCoordinate.x + renderDistance, currentChunkCoordinate.y + renderDistance);
+        _minChunkToGenerate = new Vector2Int(currentChunkCoordinate.x - renderDistance, currentChunkCoordinate.y - renderDistance);
+        _maxChunkToGenerate = new Vector2Int(currentChunkCoordinate.x + renderDistance, currentChunkCoordinate.y + renderDistance);
 
         // Checks if there are any currently generated chunks that shouldn't be generated anymore and deletes them
-        Chunk[] chunksToDelete = _renderedChunks.FindAll(a => a.chunkCoordinates.x < minChunkToGenerate.x ||
-                                     a.chunkCoordinates.y < minChunkToGenerate.y ||
-                                     a.chunkCoordinates.x > maxChunkToGenerate.x ||
-                                     a.chunkCoordinates.y > maxChunkToGenerate.y).ToArray();
+        Chunk[] chunksToDelete = _renderedChunks.FindAll(a => a.chunkCoordinates.x < _minChunkToGenerate.x ||
+                                     a.chunkCoordinates.y < _minChunkToGenerate.y ||
+                                     a.chunkCoordinates.x > _maxChunkToGenerate.x ||
+                                     a.chunkCoordinates.y > _maxChunkToGenerate.y).ToArray();
 
         foreach (Chunk chunk in chunksToDelete)
         {
             DegenerateChunk(chunk);
         }
 
-        StartCoroutine(GenerateNeighbourChunks(currentChunkCoordinate, minChunkToGenerate, maxChunkToGenerate));
-        StartCoroutine(GenerateNeighbourChunks(minChunkToGenerate, minChunkToGenerate, maxChunkToGenerate));
-        StartCoroutine(GenerateNeighbourChunks(maxChunkToGenerate, minChunkToGenerate, maxChunkToGenerate));
+        StartCoroutine(GenerateNeighbourChunks(currentChunkCoordinate));
+        StartCoroutine(GenerateNeighbourChunks(_minChunkToGenerate));
+        StartCoroutine(GenerateNeighbourChunks(_maxChunkToGenerate));
     }
 
-    IEnumerator GenerateNeighbourChunks(Vector2Int chunkToGenerate, Vector2Int minChunkToGenerate, Vector2Int maxChunkToGenerate)
+    IEnumerator GenerateNeighbourChunks(Vector2Int chunkToGenerate)
     {
-        Debug.Log("Generating NeighbourChunks");
         GenerateChunk(chunkToGenerate);
         yield return new WaitForSeconds(chunkGenerationDelay);
         
@@ -109,11 +113,11 @@ public class WorldGenerator : MonoBehaviour
         {
             if (IsChunkOutsideWorldBounds() || IsChunkGeneratedAlready())
                 return;
-            StartCoroutine(GenerateNeighbourChunks(chunkToGenerate, minChunkToGenerate, maxChunkToGenerate));
+            StartCoroutine(GenerateNeighbourChunks(chunkToGenerate));
         }
 
-        bool IsChunkOutsideWorldBounds() => chunkToGenerate.x > maxChunkToGenerate.x || chunkToGenerate.x < minChunkToGenerate.x ||
-                                           chunkToGenerate.y > maxChunkToGenerate.y || chunkToGenerate.y < minChunkToGenerate.y;
+        bool IsChunkOutsideWorldBounds() => chunkToGenerate.x > _maxChunkToGenerate.x || chunkToGenerate.x < _minChunkToGenerate.x ||
+                                           chunkToGenerate.y > _maxChunkToGenerate.y || chunkToGenerate.y < _minChunkToGenerate.y;
 
         bool IsChunkGeneratedAlready() => _renderedChunks.FindIndex(a => a.chunkCoordinates == chunkToGenerate) != -1;
     }
@@ -136,16 +140,37 @@ public class WorldGenerator : MonoBehaviour
 
         Chunk newChunk = new Chunk(chunkToGenerate, new GameObject());
         newChunk.chunkObjects.transform.parent = transform;
+        newChunk.chunkObjects.name = $"Chunk {chunkToGenerate.x}, {chunkToGenerate.y}";
+        
+        int chunkSeed = seed * 100 + chunkToGenerate.x * 10 + chunkToGenerate.y;
+        Random treesRandomGenerator = new Random(chunkSeed);
+        
+        UnityEngine.Random.State oldState = UnityEngine.Random.state;
+        UnityEngine.Random.InitState(chunkSeed);
         
         for (int x = 0; x < noiseMap.GetLength(0); x++)
         {
             for (int y = 0; y < noiseMap.GetLength(1); y++)
             {
-                Instantiate(grassBlock, new Vector3(x + chunkToGenerate.x * ChunkDimensions, Convert.ToInt32(noiseMap[x, y] * terrainScale),y + chunkToGenerate.y * ChunkDimensions), Quaternion.identity, newChunk.chunkObjects.transform);
-                Instantiate(dirtBlock, new Vector3(x + chunkToGenerate.x * ChunkDimensions, Convert.ToInt32(noiseMap[x, y] * terrainScale) - 1,y + chunkToGenerate.y * ChunkDimensions), Quaternion.identity, newChunk.chunkObjects.transform);
+                Instantiate(grassBlock, new Vector3(x + chunkToGenerate.x * ChunkDimensions, 
+                    Convert.ToInt32(noiseMap[x, y] * terrainScale),
+                    y + chunkToGenerate.y * ChunkDimensions), Quaternion.identity, newChunk.chunkObjects.transform);
+                
+                Instantiate(dirtBlock, new Vector3(x + chunkToGenerate.x * ChunkDimensions, 
+                    Convert.ToInt32(noiseMap[x, y] * terrainScale) - 1,
+                    y + chunkToGenerate.y * ChunkDimensions), Quaternion.identity, newChunk.chunkObjects.transform);
+
+                if (treesRandomGenerator.NextDouble() < treeChance)
+                {
+                    GenerateTree(new Vector3(x + chunkToGenerate.x * ChunkDimensions, 
+                        Convert.ToInt32(noiseMap[x, y] * terrainScale + 1), 
+                        y + chunkToGenerate.y * ChunkDimensions), newChunk.chunkObjects);
+                }
             }
         }
-        
+
+        UnityEngine.Random.state = oldState;
+
         _renderedChunks.Add(newChunk);
     }
 
@@ -163,7 +188,18 @@ public class WorldGenerator : MonoBehaviour
         _renderedChunks.RemoveAt(index);
     }
 
-    public Vector2Int WorldToChunkCoordinates(Vector3 coords)
+    public void GenerateTree(Vector3 treePosition, GameObject chunkObjects)
+    {
+        int amountOfLogs = UnityEngine.Random.Range(4, 6);
+
+        for (int i = 0; i < amountOfLogs; i++)
+        {
+            Instantiate(woodBlock, treePosition, Quaternion.identity, chunkObjects.transform);
+            treePosition.y++;
+        }
+    }
+
+    public static Vector2Int WorldToChunkCoordinates(Vector3 coords)
     {
         Vector2Int chunkCoordinate = new Vector2Int(Convert.ToInt32(coords.x / ChunkDimensions), Convert.ToInt32(coords.z / ChunkDimensions));
         if (coords.x < 0 && coords.x > -16)

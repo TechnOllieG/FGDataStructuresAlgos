@@ -20,9 +20,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="841c370a-51dd-4019-90b3-3c4802ff7cd4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGeneration.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MeshGeneration.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Art.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Art/BlueMarker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Art/BlueMarker.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Art/Eraser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Art/Eraser.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Art/GreenMarker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Art/GreenMarker.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Art/ReadWriteEnabledImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Art/ReadWriteEnabledImage.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Art/RedMarker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Art/RedMarker.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/ExampleDrawingScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/ExampleDrawingScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/README.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/README.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Scripts/Drawable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Scripts/Drawable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Scripts/DrawingSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeDraw/Scripts/DrawingSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/NoiseTexture.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/NoiseTexture.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/NoiseTexture2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/NoiseTexture2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/NoiseTexture3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/NoiseTexture3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dirt Block.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dirt Block.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dirt Block.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dirt Block.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Grass Block.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Grass Block.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Grass Block.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Grass Block.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TreeNode.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TreeNode.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGeneration.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MeshGeneration.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/VisualizeTree.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/VisualizeTree.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lib/BinaryTree.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lib/BinaryTree.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lib/Extensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lib/Extensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TowerOfHanoi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TowerOfHanoi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TreeVisualize.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TreeVisualize.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +77,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/FreeDraw/Scripts/Drawable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04258D1C-DC10-4424-8C2A-17A6A31A3CF7/e9/d3b5829e/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Lib/Mathfs.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Console App/FGDataStructuresAlgos/TowerOfHanoi.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WorldGenerator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04258D1C-DC10-4424-8C2A-17A6A31A3CF7/14/84050811/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Lib/Mathfs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameplaySettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04258D1C-DC10-4424-8C2A-17A6A31A3CF7/86/db93b6e9/Camera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Console App/FGDataStructuresAlgos/TowerOfHanoi.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/06/a5747595/Convert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -53,6 +98,16 @@
         <option value="$PROJECT_DIR$/Assets/MeshInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PerlinToTerrain.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lib/Mathfs.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Input.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameplaySettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MousePitch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Input.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WorldGenerator.cs" />
       </list>
     </option>
