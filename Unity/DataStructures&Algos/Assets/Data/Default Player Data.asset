@@ -16,6 +16,6 @@ MonoBehaviour:
   runSpeed: 10
   crouchSpeed: 3
   crouchHeight: 1.5
-  jumpForce: 5
+  jumpForce: 7
   gravityMultiplier: 1
   inAirMovementMultiplier: 1

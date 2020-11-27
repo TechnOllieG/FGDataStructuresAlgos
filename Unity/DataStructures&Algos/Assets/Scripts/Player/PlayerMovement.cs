@@ -1,5 +1,8 @@
 ﻿using System;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 namespace FG
 {
@@ -25,7 +28,7 @@ namespace FG
         private Transform _transform;
         private Rigidbody _rigidbody;
         private CapsuleCollider _capsuleCollider;
-        
+
         public bool IsCrouching { get; private set; }
 
         private void Awake()
@@ -76,8 +79,28 @@ namespace FG
             {
                 _currentSpeed *= playerData.inAirMovementMultiplier;
             }
+        }
 
+        private void FixedUpdate()
+        {
             SetVelocity();
+            
+            // Get the velocity
+            Vector3 horizontalMove = _rigidbody.velocity;
+            // Don't use the vertical velocity
+            horizontalMove.y = 0;
+            // Calculate the approximate distance that will be traversed
+            float distance =  horizontalMove.magnitude * Time.fixedDeltaTime;
+            // Normalize horizontalMove since it should be used to indicate direction
+            horizontalMove.Normalize();
+            RaycastHit hit;
+ 
+            // Check if the body's current velocity will result in a collision
+            if(_rigidbody.SweepTest(horizontalMove, out hit, distance))
+            {
+                // If so, stop the movement
+                _rigidbody.velocity = new Vector3(0, _rigidbody.velocity.y, 0);
+            }
         }
 
         private void EnterCrouch()
@@ -96,15 +119,14 @@ namespace FG
 
         private bool CheckGrounded()
         {
-            // Todo make better
             Debug.DrawRay(_transform.position + _capsuleCollider.center, Vector3.down * _capsuleCollider.height / 2f, Color.red);
             return Physics.Raycast(_transform.position + _capsuleCollider.center, Vector3.down, _capsuleCollider.height / 2f + 0.1f);
         }
 
         private void SetVelocity()
         {
-            Vector3 velocity = (_moveDirection * (_currentSpeed * _inputAmount));
-            velocity.y = _adjustVerticalVelocity * playerData.gravityMultiplier;
+            Vector3 velocity = _moveDirection * (_currentSpeed * _inputAmount);
+            velocity.y += _adjustVerticalVelocity * playerData.gravityMultiplier;
             _rigidbody.velocity = velocity;
         }
     }

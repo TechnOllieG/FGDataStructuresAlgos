@@ -37,6 +37,8 @@ public class WorldGenerator : MonoBehaviour
     public float lacunarity = 1f;
 
     private const int ChunkDimensions = 16;
+    private const float RandomLeafBlockInstantiationChance = 0.5f;
+    
     private readonly List<Chunk> _renderedChunks = new List<Chunk>();
     private Vector2Int _minChunkValue;
     private Vector2Int _maxChunkValue;
@@ -198,6 +200,7 @@ public class WorldGenerator : MonoBehaviour
             treePosition.y++;
         }
 
+        #region LeafPositions
         Vector3Int[] leafTopOfTree = new Vector3Int[]
         {
             // 9 blocks at the top
@@ -209,12 +212,89 @@ public class WorldGenerator : MonoBehaviour
             new Vector3Int(treePosition.x, treePosition.y, treePosition.z + 1), 
             new Vector3Int(treePosition.x, treePosition.y - 1, treePosition.z + 1), 
             new Vector3Int(treePosition.x, treePosition.y, treePosition.z - 1), 
-            new Vector3Int(treePosition.x, treePosition.y - 1, treePosition.z - 1), 
+            new Vector3Int(treePosition.x, treePosition.y - 1, treePosition.z - 1),
         };
+        
+        Vector3Int[] topSliceOfBottomTree = new Vector3Int[]
+        {
+            // 8 blocks closest to trunk
+            new Vector3Int(treePosition.x + 1, treePosition.y - 2, treePosition.z),
+            new Vector3Int(treePosition.x - 1, treePosition.y - 2, treePosition.z),
+            new Vector3Int(treePosition.x, treePosition.y - 2, treePosition.z + 1),
+            new Vector3Int(treePosition.x, treePosition.y - 2, treePosition.z - 1),
+            new Vector3Int(treePosition.x + 1, treePosition.y - 2, treePosition.z + 1),
+            new Vector3Int(treePosition.x + 1, treePosition.y - 2, treePosition.z - 1),
+            new Vector3Int(treePosition.x - 1, treePosition.y - 2, treePosition.z + 1),
+            new Vector3Int(treePosition.x - 1, treePosition.y - 2, treePosition.z - 1),
+            
+            // Outer 3 positive x
+            new Vector3Int(treePosition.x + 2, treePosition.y - 2, treePosition.z),
+            new Vector3Int(treePosition.x + 2, treePosition.y - 2, treePosition.z + 1),
+            new Vector3Int(treePosition.x + 2, treePosition.y - 2, treePosition.z - 1),
+            
+            // Outer 3 negative x
+            new Vector3Int(treePosition.x - 2, treePosition.y - 2, treePosition.z),
+            new Vector3Int(treePosition.x - 2, treePosition.y - 2, treePosition.z + 1),
+            new Vector3Int(treePosition.x - 2, treePosition.y - 2, treePosition.z - 1),
+            
+            // Outer 3 positive z
+            new Vector3Int(treePosition.x, treePosition.y - 2, treePosition.z + 2),
+            new Vector3Int(treePosition.x + 1, treePosition.y - 2, treePosition.z + 2),
+            new Vector3Int(treePosition.x - 1, treePosition.y - 2, treePosition.z + 2),
+            
+            // Outer 3 negative z
+            new Vector3Int(treePosition.x, treePosition.y - 2, treePosition.z - 2),
+            new Vector3Int(treePosition.x + 1, treePosition.y - 2, treePosition.z - 2),
+            new Vector3Int(treePosition.x - 1, treePosition.y - 2, treePosition.z - 2)
+        };
+        
+        Vector3Int[] randomLeafBlocks = new Vector3Int[] // The blocks that may or may not spawn, depending on the random generator
+        {
+            // BottomTree -x, -z corner
+            new Vector3Int(treePosition.x - 2, treePosition.y - 2, treePosition.z - 2),
+            new Vector3Int(treePosition.x - 2, treePosition.y - 3, treePosition.z - 2),
+            
+            // BottomTree -x, z corner
+            new Vector3Int(treePosition.x - 2, treePosition.y - 2, treePosition.z + 2),
+            new Vector3Int(treePosition.x - 2, treePosition.y - 3, treePosition.z + 2),
+            
+            // BottomTree x, -z corner
+            new Vector3Int(treePosition.x + 2, treePosition.y - 2, treePosition.z - 2),
+            new Vector3Int(treePosition.x + 2, treePosition.y - 3, treePosition.z - 2),
+            
+            // BottomTree x, z corner
+            new Vector3Int(treePosition.x + 2, treePosition.y - 2, treePosition.z + 2),
+            new Vector3Int(treePosition.x + 2, treePosition.y - 3, treePosition.z + 2),
+            
+            // TopOfTree -x, -z corner
+            new Vector3Int(treePosition.x - 1, treePosition.y - 1, treePosition.z - 1),
+            
+            // TopOfTree -x, z corner
+            new Vector3Int(treePosition.x - 1, treePosition.y - 1, treePosition.z + 1),
+            
+            // TopOfTree x, -z corner
+            new Vector3Int(treePosition.x + 1, treePosition.y - 1, treePosition.z - 1),
+            
+            // TopOfTree x, z corner
+            new Vector3Int(treePosition.x + 1, treePosition.y - 1, treePosition.z + 1)
+        };
+        #endregion
 
         foreach (Vector3Int leaf in leafTopOfTree)
         {
             Instantiate(leafBlock, leaf, Quaternion.identity, chunkObjects.transform);
+        }
+
+        foreach (Vector3Int leaf in topSliceOfBottomTree)
+        {
+            Instantiate(leafBlock, leaf, Quaternion.identity, chunkObjects.transform);
+            Instantiate(leafBlock, leaf.Where(y: leaf.y - 1), Quaternion.identity, chunkObjects.transform);
+        }
+        
+        foreach (Vector3Int leaf in randomLeafBlocks)
+        {
+            if (UnityEngine.Random.Range(0f, 1f) < RandomLeafBlockInstantiationChance)
+                Instantiate(leafBlock, leaf, Quaternion.identity, chunkObjects.transform);
         }
     }
 
