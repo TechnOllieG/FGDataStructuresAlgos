@@ -76,9 +76,9 @@ public class WorldGenerator : MonoBehaviour
 
         // Checks if there are any currently generated chunks that shouldn't be generated anymore and deletes them
         Chunk[] chunksToDelete = _renderedChunks.FindAll(a => a.chunkCoordinates.x < _minChunkToGenerate.x ||
-                                     a.chunkCoordinates.y < _minChunkToGenerate.y ||
-                                     a.chunkCoordinates.x > _maxChunkToGenerate.x ||
-                                     a.chunkCoordinates.y > _maxChunkToGenerate.y).ToArray();
+                                                              a.chunkCoordinates.y < _minChunkToGenerate.y ||
+                                                              a.chunkCoordinates.x > _maxChunkToGenerate.x ||
+                                                              a.chunkCoordinates.y > _maxChunkToGenerate.y).ToArray();
 
         foreach (Chunk chunk in chunksToDelete)
         {
@@ -117,7 +117,7 @@ public class WorldGenerator : MonoBehaviour
         }
 
         bool IsChunkOutsideWorldBounds() => chunkToGenerate.x > _maxChunkToGenerate.x || chunkToGenerate.x < _minChunkToGenerate.x ||
-                                           chunkToGenerate.y > _maxChunkToGenerate.y || chunkToGenerate.y < _minChunkToGenerate.y;
+                                            chunkToGenerate.y > _maxChunkToGenerate.y || chunkToGenerate.y < _minChunkToGenerate.y;
 
         bool IsChunkGeneratedAlready() => _renderedChunks.FindIndex(a => a.chunkCoordinates == chunkToGenerate) != -1;
     }
@@ -152,17 +152,17 @@ public class WorldGenerator : MonoBehaviour
         {
             for (int y = 0; y < noiseMap.GetLength(1); y++)
             {
-                Instantiate(grassBlock, new Vector3(x + chunkToGenerate.x * ChunkDimensions, 
+                Instantiate(grassBlock, new Vector3Int(x + chunkToGenerate.x * ChunkDimensions, 
                     Convert.ToInt32(noiseMap[x, y] * terrainScale),
                     y + chunkToGenerate.y * ChunkDimensions), Quaternion.identity, newChunk.chunkObjects.transform);
                 
-                Instantiate(dirtBlock, new Vector3(x + chunkToGenerate.x * ChunkDimensions, 
+                Instantiate(dirtBlock, new Vector3Int(x + chunkToGenerate.x * ChunkDimensions, 
                     Convert.ToInt32(noiseMap[x, y] * terrainScale) - 1,
                     y + chunkToGenerate.y * ChunkDimensions), Quaternion.identity, newChunk.chunkObjects.transform);
 
                 if (treesRandomGenerator.NextDouble() < treeChance)
                 {
-                    GenerateTree(new Vector3(x + chunkToGenerate.x * ChunkDimensions, 
+                    GenerateTree(new Vector3Int(x + chunkToGenerate.x * ChunkDimensions, 
                         Convert.ToInt32(noiseMap[x, y] * terrainScale + 1), 
                         y + chunkToGenerate.y * ChunkDimensions), newChunk.chunkObjects);
                 }
@@ -188,7 +188,7 @@ public class WorldGenerator : MonoBehaviour
         _renderedChunks.RemoveAt(index);
     }
 
-    public void GenerateTree(Vector3 treePosition, GameObject chunkObjects)
+    public void GenerateTree(Vector3Int treePosition, GameObject chunkObjects)
     {
         int amountOfLogs = UnityEngine.Random.Range(4, 6);
 
@@ -196,6 +196,25 @@ public class WorldGenerator : MonoBehaviour
         {
             Instantiate(woodBlock, treePosition, Quaternion.identity, chunkObjects.transform);
             treePosition.y++;
+        }
+
+        Vector3Int[] leafTopOfTree = new Vector3Int[]
+        {
+            // 9 blocks at the top
+            treePosition, 
+            new Vector3Int(treePosition.x + 1, treePosition.y, treePosition.z), 
+            new Vector3Int(treePosition.x + 1, treePosition.y - 1, treePosition.z), 
+            new Vector3Int(treePosition.x - 1, treePosition.y, treePosition.z), 
+            new Vector3Int(treePosition.x - 1, treePosition.y - 1, treePosition.z), 
+            new Vector3Int(treePosition.x, treePosition.y, treePosition.z + 1), 
+            new Vector3Int(treePosition.x, treePosition.y - 1, treePosition.z + 1), 
+            new Vector3Int(treePosition.x, treePosition.y, treePosition.z - 1), 
+            new Vector3Int(treePosition.x, treePosition.y - 1, treePosition.z - 1), 
+        };
+
+        foreach (Vector3Int leaf in leafTopOfTree)
+        {
+            Instantiate(leafBlock, leaf, Quaternion.identity, chunkObjects.transform);
         }
     }
 

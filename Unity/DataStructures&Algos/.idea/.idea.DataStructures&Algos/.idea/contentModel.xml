@@ -25,6 +25,7 @@
             <e p="CollectionsExtensions.cs" t="Include" />
             <e p="Mathfs.cs" t="Include" />
             <e p="PerlinNoise.cs" t="Include" />
+            <e p="VectorExtensions.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="Input.cs" t="Include" />

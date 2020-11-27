@@ -249,7 +249,7 @@ MonoBehaviour:
   grassBlock: {fileID: 3904782932808904495, guid: 3144b258dfcb98048ad29af822baa017, type: 3}
   dirtBlock: {fileID: 7374773402241094730, guid: 26353fd73326e6d42a42aecd7c124d61, type: 3}
   woodBlock: {fileID: 2801877830889631898, guid: 244c93278a28e5b47a4ec9082ae7f21d, type: 3}
-  leafBlock: {fileID: 0}
+  leafBlock: {fileID: 5305365101398156034, guid: a0b82b59ff771ab4889891c6609ff709, type: 3}
   player: {fileID: 1894793364}
   maxWorldSizeInChunks: {x: 50, y: 50}
   chunkGenerationDelay: 0
@@ -655,8 +655,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.35
-  m_Height: 2
+  m_Radius: 0.4
+  m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1896709523
