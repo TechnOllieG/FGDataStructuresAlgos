@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="841c370a-51dd-4019-90b3-3c4802ff7cd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Default Player Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Default Player Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Leaf.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Leaf.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Minecraft.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Minecraft.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="841c370a-51dd-4019-90b3-3c4802ff7cd4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +123,7 @@
       <workItem from="1606297669736" duration="90000" />
       <workItem from="1606298926317" duration="18481000" />
       <workItem from="1606381322928" duration="2557000" />
-      <workItem from="1606473897198" duration="12620000" />
+      <workItem from="1606473897198" duration="12669000" />
     </task>
     <servers />
   </component>
