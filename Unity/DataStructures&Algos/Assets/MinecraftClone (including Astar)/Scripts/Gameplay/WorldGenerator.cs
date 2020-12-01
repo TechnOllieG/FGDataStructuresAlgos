@@ -134,9 +134,11 @@ public class WorldGenerator : MonoBehaviour
             return;
 
         Vector2 tempOffset = Mathfs.Remap(_minChunkValue, _maxChunkValue, Vector2.zero, 
-            maxWorldSizeInChunks * ChunkDimensions, chunkToGenerate);
+            maxWorldSizeInChunks, chunkToGenerate);
 
-        Vector2Int offset = new Vector2Int {x = Convert.ToInt32(tempOffset.x), y = Convert.ToInt32(tempOffset.y)};
+        Vector2Int offset = new Vector2Int {x = Convert.ToInt32(tempOffset.x), y = Convert.ToInt32(tempOffset.y)} * ChunkDimensions;
+        
+        Debug.Log($"Chunk {chunkToGenerate} has the offset {offset}");
 
         float[,] noiseMap = PerlinNoise.Generate(ChunkDimensions, ChunkDimensions, scale, octaves, persistance, lacunarity, offset.x, offset.y);
 

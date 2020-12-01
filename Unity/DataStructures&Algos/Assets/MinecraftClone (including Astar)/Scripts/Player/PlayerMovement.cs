@@ -84,23 +84,6 @@ namespace FG
         private void FixedUpdate()
         {
             SetVelocity();
-            
-            // Get the velocity
-            Vector3 horizontalMove = _rigidbody.velocity;
-            // Don't use the vertical velocity
-            horizontalMove.y = 0;
-            // Calculate the approximate distance that will be traversed
-            float distance =  horizontalMove.magnitude * Time.fixedDeltaTime;
-            // Normalize horizontalMove since it should be used to indicate direction
-            horizontalMove.Normalize();
-            RaycastHit hit;
- 
-            // Check if the body's current velocity will result in a collision
-            if(_rigidbody.SweepTest(horizontalMove, out hit, distance))
-            {
-                // If so, stop the movement
-                _rigidbody.velocity = new Vector3(0, _rigidbody.velocity.y, 0);
-            }
         }
 
         private void EnterCrouch()
