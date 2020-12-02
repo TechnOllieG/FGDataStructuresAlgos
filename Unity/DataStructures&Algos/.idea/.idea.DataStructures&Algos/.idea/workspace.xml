@@ -23,115 +23,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Default Player Data.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Default Player Data.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Dirt.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Dirt.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Grass.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Grass.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Leaf.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Leaf.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/NoiseTexture.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/NoiseTexture.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/NoiseTexture2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/NoiseTexture2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/NoiseTexture3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/NoiseTexture3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wood.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Wood.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/MC Cube.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/MC Cube.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BaseCube.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BaseCube.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dirt Block.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dirt Block.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Grass Block.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Grass Block.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Leaf Block.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Leaf Block.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wood Block.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wood Block.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Minecraft.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Minecraft.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameplaySettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameplaySettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lib/CollectionsExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lib/CollectionsExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lib/Mathfs.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lib/Mathfs.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lib/PerlinNoise.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lib/PerlinNoise.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lib/VectorExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lib/VectorExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Input.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Input.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MousePitch.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MousePitch.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestPerlinNoise.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestPerlinNoise.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGenerator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldGenerator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/1356119798126.png.0d82d769c9a5dc58c05ffafd05993f23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/1356119798126.png.0d82d769c9a5dc58c05ffafd05993f23.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/266df7ab6322509273a9cddeeee5a3e7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/266df7ab6322509273a9cddeeee5a3e7.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Leaves.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Leaves.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Oak_Leaves transparent 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Oak_Leaves transparent 1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Oak_Leaves transparent.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Oak_Leaves transparent.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/wood.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/wood.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/BinaryTree.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/BinaryTree.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/Extensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/Extensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Art.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Art/BlueMarker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Art/BlueMarker.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Art/Eraser.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Art/Eraser.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Art/GreenMarker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Art/GreenMarker.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Art/ReadWriteEnabledImage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Art/ReadWriteEnabledImage.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Art/RedMarker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Art/RedMarker.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/ExampleDrawingScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/ExampleDrawingScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/README.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/README.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Scripts/Drawable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Scripts/Drawable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Scripts/DrawingSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/FreeDraw/Scripts/DrawingSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/TowerOfHanoi.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/TowerOfHanoi.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/TreeNode.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/TreeNode.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/TreeVisualize.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/TreeVisualize.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/VisualizeTree.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_NotMCClone/VisualizeTree.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Data/Default Player Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Data/Default Player Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scenes/Minecraft.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scenes/Minecraft.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Enemy/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Enemy/EnemyMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Enemy/EnemyPointer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Enemy/EnemyPointer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Gameplay/WorldGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Gameplay/WorldGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Lib/AStarLib.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Lib/AStarLib.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/BinaryTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/BinaryTree.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,10 +43,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F8918D0C-C5FC-41A1-BABA-01B207A4C016/09/7b4cc4bf/Collider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04258D1C-DC10-4424-8C2A-17A6A31A3CF7/86/db93b6e9/Camera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Console App/FGDataStructuresAlgos/TowerOfHanoi.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/e0/04aeadc6/Int32.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/3b/682c1566/Array.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/06/a5747595/Convert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04258D1C-DC10-4424-8C2A-17A6A31A3CF7/c5/e32af8d6/Bounds.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/71/2baaa9e1/IArraySortHelper`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Gameplay/WorldGenerator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -179,9 +83,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Lib/PriorityQueueAStar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lib/AStarLib.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.cs" />
         <option value="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/EnemyMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.cs" />
+        <option value="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Gameplay/WorldGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Enemy/EnemyPointer.cs" />
+        <option value="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Lib/AStarLib.cs" />
+        <option value="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Enemy/EnemyMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/BinaryTree.cs" />
       </list>
     </option>
   </component>
@@ -244,6 +153,7 @@
       <workItem from="1606821978511" duration="4900000" />
       <workItem from="1606834132293" duration="43000" />
       <workItem from="1606834197741" duration="3357000" />
+      <workItem from="1606905481393" duration="12559000" />
     </task>
     <servers />
   </component>
@@ -268,9 +178,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1606232855071">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="707" y="234" width="672" height="504" key="search.everywhere.popup" timestamp="1606907409693">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="707" y="234" width="672" height="504" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606907409693" />
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1606232855071" />
   </component>
 </project>

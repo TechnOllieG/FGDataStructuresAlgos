@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 6.75
   runSpeed: 10
-  crouchSpeed: 3
-  crouchHeight: 1.5
-  jumpForce: 7
+  crouchSpeed: 4
+  crouchHeight: 1
+  jumpForce: 20
   gravityMultiplier: 1
   inAirMovementMultiplier: 1

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace FGDataStructuresAlgos
 {
@@ -26,10 +27,7 @@ namespace FGDataStructuresAlgos
 						currentLoc.Right = new BinaryTreeNode<T>(value);
 						return;
 					}
-					else
-					{
-						currentLoc = currentLoc.Right;
-					}
+					currentLoc = currentLoc.Right;
 				}
 				else
 				{
@@ -38,14 +36,12 @@ namespace FGDataStructuresAlgos
 						currentLoc.Left = new BinaryTreeNode<T>(value);
 						return;
 					}
-					else
-					{
-						currentLoc = currentLoc.Left;
-					}
+					currentLoc = currentLoc.Left;
 				}
 			}
 		}
 
+		// Breadth Search here
 		public BinaryTreeNode<T> BreadthSearch(T value)
 		{
 			if (Root == null)
@@ -64,7 +60,6 @@ namespace FGDataStructuresAlgos
 			{
 				if (returnValue != null)
 					break;
-				iterations++;
 				List<BinaryTreeNode<T>> tempList = nodes;
 				nodes = new List<BinaryTreeNode<T>>();
 
@@ -83,21 +78,23 @@ namespace FGDataStructuresAlgos
 						if (node.Right.Value.CompareTo(value) == 0)
 							returnValue = node.Right;
 					}
+					iterations++;
 				}
 
 				if (nodes.Count == 0)
 					break;
 			}
 			
-			Console.WriteLine($"Amount of iterations: {iterations}");
+			Debug.Log($"Amount of iterations: {iterations}");
 			return returnValue;
 		}
 
+		// Depth Search here
 		public BinaryTreeNode<T> DepthSearch(T value)
 		{
 			if (Root == null)
 			{
-				Console.WriteLine("Tree contains no elements");
+				Debug.Log("Tree contains no elements");
 				return null;
 			}
 			
@@ -127,7 +124,7 @@ namespace FGDataStructuresAlgos
 				}
 			}
 
-			Console.WriteLine($"Amount of iterations: {iterations}");
+			Debug.Log($"Amount of iterations: {iterations}");
 			return returnValue;
 		}
 

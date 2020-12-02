@@ -113,13 +113,16 @@ public class WorldGenerator : MonoBehaviour
 
         void Check()
         {
-            if (IsChunkOutsideWorldBounds() || IsChunkGeneratedAlready())
+            if (IsChunkOutsideRenderDistance() || IsChunkGeneratedAlready() || IsChunkOutsideWorldBounds())
                 return;
             StartCoroutine(GenerateNeighbourChunks(chunkToGenerate));
         }
 
-        bool IsChunkOutsideWorldBounds() => chunkToGenerate.x > _maxChunkToGenerate.x || chunkToGenerate.x < _minChunkToGenerate.x ||
+        bool IsChunkOutsideRenderDistance() => chunkToGenerate.x > _maxChunkToGenerate.x || chunkToGenerate.x < _minChunkToGenerate.x ||
                                             chunkToGenerate.y > _maxChunkToGenerate.y || chunkToGenerate.y < _minChunkToGenerate.y;
+
+        bool IsChunkOutsideWorldBounds() => chunkToGenerate.x < _minChunkValue.x || chunkToGenerate.y < _minChunkValue.y ||
+                                            chunkToGenerate.x > _maxChunkValue.x || chunkToGenerate.y > _maxChunkValue.y;
 
         bool IsChunkGeneratedAlready() => _renderedChunks.FindIndex(a => a.chunkCoordinates == chunkToGenerate) != -1;
     }
@@ -138,7 +141,7 @@ public class WorldGenerator : MonoBehaviour
 
         Vector2Int offset = new Vector2Int {x = Convert.ToInt32(tempOffset.x), y = Convert.ToInt32(tempOffset.y)} * ChunkDimensions;
         
-        Debug.Log($"Chunk {chunkToGenerate} has the offset {offset}");
+        // Debug.Log($"Chunk {chunkToGenerate} has the offset {offset}");
 
         float[,] noiseMap = PerlinNoise.Generate(ChunkDimensions, ChunkDimensions, scale, octaves, persistance, lacunarity, offset.x, offset.y);
 

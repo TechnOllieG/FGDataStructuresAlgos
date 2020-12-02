@@ -306,6 +306,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 50, y: 10}
   nodePrefab: {fileID: 3308980620373498104, guid: f7acd230f17b161418133390f210fd72, type: 3}
+  search: 1
+  searchMode: 0
+  numberToSearchFor: 44
   input: 2c0000004c010000380000000400000020000000be0100002a090000170000007000000021000000
   lineAttachmentOffset: 1.7
 --- !u!114 &2065516666
