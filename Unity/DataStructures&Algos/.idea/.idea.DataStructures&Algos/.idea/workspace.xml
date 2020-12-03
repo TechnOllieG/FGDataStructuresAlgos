@@ -23,16 +23,55 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Data/Default Player Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Data/Default Player Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scenes/Minecraft.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scenes/Minecraft.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Enemy/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Enemy/EnemyMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Enemy/EnemyPointer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Enemy/EnemyPointer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Gameplay/WorldGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Gameplay/WorldGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Lib/AStarLib.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Lib/AStarLib.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/BinaryTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/BinaryTree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (Procedural mesh gen)/Scenes/Minecraft.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinecraftClone (Procedural mesh gen)/Scenes/Minecraft.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc).meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/BinaryTree.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/BinaryTree.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeNode.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeNode.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/AStarLib.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/AStarLib.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Materials/Default Grid Point Object Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Materials/Default Grid Point Object Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Materials/GridFuturePath.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Materials/GridFuturePath.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Materials/GridPathEnd.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Materials/GridPathEnd.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Prefabs/Grid2D.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Prefabs/Grid2D.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts/Editor/Grid2DEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts/Editor/Grid2DEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts/Editor/Grid2DSingletonEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts/Editor/Grid2DSingletonEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts/Grid2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts/Grid2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts/Grid2DSingleton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts/Grid2DSingleton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts/Lib.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts/Lib/GridLibrary.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts/Lib/GridLibrary.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/EnemyMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/EnemyMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/Pathfinding.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/Pathfinding.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/TowerOfHanoi (Bouns).meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/TowerOfHanoi (Bouns)/Extensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/TowerOfHanoi (Bouns)/Extensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/TowerOfHanoi (Bouns)/TowerOfHanoi.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/TowerOfHanoi (Bouns)/TowerOfHanoi.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/TowerOfHanoi (Bouns)/TowerOfHanoi.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/TowerOfHanoi (Bouns)/TowerOfHanoi.unity.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +89,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/3b/682c1566/Array.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/06/a5747595/Convert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/04258D1C-DC10-4424-8C2A-17A6A31A3CF7/c5/e32af8d6/Bounds.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/TreeVisualize.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/63DD8BF9-8CFA-4BA9-85AF-735EF1A56BA9/71/2baaa9e1/IArraySortHelper`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Gameplay/WorldGenerator.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -91,6 +128,12 @@
         <option value="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Lib/AStarLib.cs" />
         <option value="$PROJECT_DIR$/Assets/MinecraftClone (including Astar)/Scripts/Enemy/EnemyMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/BinaryTree/BinaryTree.cs" />
+        <option value="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts/ObjectSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/CustomizableGameGrid/Scripts/Grid2D.cs" />
+        <option value="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Tower of Hanoi etc)/Pathfinding/EnemyMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/AStarLib.cs" />
+        <option value="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/EnemyMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/Scripts/EnemyMovement.cs" />
       </list>
     </option>
   </component>
@@ -154,6 +197,7 @@
       <workItem from="1606834132293" duration="43000" />
       <workItem from="1606834197741" duration="3357000" />
       <workItem from="1606905481393" duration="12559000" />
+      <workItem from="1606999880246" duration="6625000" />
     </task>
     <servers />
   </component>

@@ -41,33 +41,33 @@ namespace TechnOllieG.CustomizableGameGrid
 		}
 
 		#region Inspector Variables
-		[SerializeField] protected Material defaultGridPointMaterial = default;
-		[SerializeField] protected Material[] visualizedPointMaterials = default;
-		[SerializeField] protected Axes gridAxes = Axes.XZ;
-		[SerializeField] protected int gridPointWidth = 1;
-		[SerializeField] protected int gridPointLength = 1;
-		[SerializeField] protected float scaleWidth = 1f;
-		[SerializeField] protected float scaleDepth = 1f;
-		[SerializeField] protected float scaleLength = 1f;
-		[SerializeField] protected bool instantiateGridPointObjects = true;
-		[SerializeField] protected ObjectSnapping gridPointObjectSnapping = ObjectSnapping.MeshBoundsTopToGrid;
-		[SerializeField] protected bool customGridPointObjects = false;
-		[SerializeField] protected GameObject customObjectPrefab = default;
-		[SerializeField] protected bool calculateGridLines = true;
-		[SerializeField] protected bool showGridLines = true;
-		[SerializeField] protected Color gridLineColor = Color.gray;
-		[SerializeField] protected float gridLineDepthOffset = 0f;
-		[SerializeField] protected bool customizeLineWidth = false;
-		[SerializeField] protected float customLineWidth = 0f;
+		public Material defaultGridPointMaterial = default;
+		public Material[] visualizedPointMaterials = default;
+		public Axes gridAxes = Axes.XZ;
+		public int gridPointWidth = 1;
+		public int gridPointLength = 1;
+		public float scaleWidth = 1f;
+		public float scaleDepth = 1f;
+		public float scaleLength = 1f;
+		public bool instantiateGridPointObjects = true;
+		public ObjectSnapping gridPointObjectSnapping = ObjectSnapping.MeshBoundsTopToGrid;
+		public bool customGridPointObjects = false;
+		public GameObject customObjectPrefab = default;
+		public bool calculateGridLines = true;
+		public bool showGridLines = true;
+		public Color gridLineColor = Color.gray;
+		public float gridLineDepthOffset = 0f;
+		public bool customizeLineWidth = false;
+		public float customLineWidth = 0f;
 
 		// ========= DEBUG =========
         
-		[SerializeField] protected bool showGridLinesInEditor = false;
-		[SerializeField] protected Color gridLineEditorColor = Color.red;
-		[SerializeField] protected float gridLineEditorDepthOffset = 0f;
-		[SerializeField] protected bool showGridCornersInEditor = false;
-		[SerializeField] protected Color gridCornerEditorColor = Color.red;
-		[SerializeField] protected float gridCornerRadius = 0.2f;
+		public bool showGridLinesInEditor = false;
+		public Color gridLineEditorColor = Color.red;
+		public float gridLineEditorDepthOffset = 0f;
+		public bool showGridCornersInEditor = false;
+		public Color gridCornerEditorColor = Color.red;
+		public float gridCornerRadius = 0.2f;
 		#endregion
         
 		#region Public Variables
@@ -259,6 +259,7 @@ namespace TechnOllieG.CustomizableGameGrid
 							objectPos.DepthComponent(ax) += gridPointObjectSnapping == ObjectSnapping.MeshBoundsBottomToGrid ? (boundSize.y * objectScale.y) / 2f : -((boundSize.y * objectScale.y) / 2f);
 						}
 						gridPointObjects[index].transform.position = objectPos;
+						gridPointObjects[index].name = $"Grid Point Object {index}";
                     
 						gridPointObjects[index].transform.parent = _transform;
 						gridPointObjects[index].transform.rotation = objectRotation;
@@ -379,26 +380,6 @@ namespace TechnOllieG.CustomizableGameGrid
 				gridPointObjects = new GameObject[gridPointWidth * gridPointLength];
 			else
 				gridPointObjects = new GameObject[0];
-		}
-		
-		/// <summary>
-		/// Calculates grid point object rotation
-		/// </summary>
-		protected Quaternion CalculateObjectRotation()
-		{
-			Axes ax = gridAxes;
-			
-			switch (ax)
-			{
-				case Axes.XY:
-					return Quaternion.LookRotation(_transform.up, -transform.forward);
-				case Axes.XZ:
-					return Quaternion.LookRotation(_transform.forward, _transform.up);
-				case Axes.ZY:
-					return Quaternion.LookRotation(-_transform.up, _transform.right);
-				default:
-					return Quaternion.identity;
-			}
 		}
 
 		/// <summary>
@@ -620,6 +601,27 @@ namespace TechnOllieG.CustomizableGameGrid
 			}
 		}
         
+		/// <summary>
+		/// Calculates the rotation an object should have if the up vector of the object should be perpendicular to the depth axis vector of the current grid
+		/// </summary>
+		public Quaternion CalculateObjectRotation()
+		{
+			_transform = transform;
+			Axes ax = gridAxes;
+			
+			switch (ax)
+			{
+				case Axes.XY:
+					return Quaternion.LookRotation(_transform.up, -_transform.forward);
+				case Axes.XZ:
+					return Quaternion.LookRotation(_transform.forward, _transform.up);
+				case Axes.ZY:
+					return Quaternion.LookRotation(-_transform.up, _transform.right);
+				default:
+					return Quaternion.identity;
+			}
+		}
+		
 		/// <summary>
 		/// Takes the index of a point and a PointVisualizationMode enum to temporarily change the material of the point object. Use ClearPath() to reset all points material back to default.
 		/// </summary>

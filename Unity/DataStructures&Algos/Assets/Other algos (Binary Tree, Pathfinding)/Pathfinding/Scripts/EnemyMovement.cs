@@ -11,9 +11,9 @@ public class EnemyMovement : MonoBehaviour
     public float minDistanceToPlayer = 1f;
     public bool visualizePath = false;
     public GameObject prefabUsedToVisualize;
-    
+
     private Transform _transform;
-    private PriorityQueueAStar priorityQueue = new PriorityQueueAStar();
+    public PriorityQueueAStar priorityQueue = new PriorityQueueAStar();
     private Rigidbody _rigidbody;
     private Collider _collider;
     private List<Vector3> _path = new List<Vector3>();
@@ -31,9 +31,14 @@ public class EnemyMovement : MonoBehaviour
         _collider = GetComponent<Collider>();
     }
 
+    private void Start()
+    {
+        target = GameObject.FindWithTag("Player").transform;
+    }
+
     private void Update()
     {
-        while (DistanceBetweenEnemyAndTarget() < MaxTrackingDistance() && DistanceBetweenEnemyAndTarget() > MinDistanceToPlayer())
+        if (DistanceBetweenEnemyAndTarget() < MaxTrackingDistance() && DistanceBetweenEnemyAndTarget() > MinDistanceToPlayer())
         {
             if (priorityQueue.Count == 0)
             {
@@ -47,8 +52,7 @@ public class EnemyMovement : MonoBehaviour
                 {
                     Instantiate(prefabUsedToVisualize, point.position, Quaternion.identity, _transform);
                 }
-
-                continue;
+                
             }
             Point currentPoint = priorityQueue.DequeueFirst();
             CheckNeighbours(currentPoint);
