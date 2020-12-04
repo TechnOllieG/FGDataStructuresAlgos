@@ -7,7 +7,7 @@ namespace FG.Pathfinding
 {
     public class PriorityQueueAStar
     {
-        public int Count => queue.Count;
+        public int Count => queue.Count; 
         public List<Point> queue = new List<Point>();
 
         public Point DequeueFirst()
@@ -29,7 +29,7 @@ namespace FG.Pathfinding
                 Console.WriteLine("There are no elements in the queue");
                 return default;
             }
-            return queue.First();
+            return queue[0];
         }
         
         public Point DequeueLast()
@@ -62,18 +62,21 @@ namespace FG.Pathfinding
             }
             else
             {
-                float smallestCombinedHeuristics = queue[0].heuristic;
                 for (int i = 0; i < queue.Count; i++)
                 {
-                    if (queue[i].heuristic < smallestCombinedHeuristics)
+                    if (point.heuristic < queue[i].heuristic)
                     {
                         queue.Insert(i, point);
+                        return;
                     }
                 }
+
+                queue.Add(point);
             }
         }
     }
-
+    
+    [Serializable]
     public class Point
     {
         public Vector3 position;
