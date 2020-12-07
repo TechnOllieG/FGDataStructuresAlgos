@@ -14,8 +14,7 @@ namespace TechnOllieG.CustomizableGameGrid
 		public enum PointVisualizationMode
 		{
 			Path,
-			EndOfPath,
-			Selected
+			EndOfPath
 		}
 		
 		public enum Axes
@@ -266,8 +265,12 @@ namespace TechnOllieG.CustomizableGameGrid
 						gridPointObjects[index].transform.localScale = objectScale;
 
 						MeshRenderer currentObjectsMeshRenderer;
-						if (defaultGridPointMaterial != null && (currentObjectsMeshRenderer = gridPointObjects[index].GetComponent<MeshRenderer>()) != null)
+						if ((currentObjectsMeshRenderer = gridPointObjects[index].GetComponent<MeshRenderer>()) != null)
 						{
+							if (defaultGridPointMaterial == null)
+							{
+								defaultGridPointMaterial = currentObjectsMeshRenderer.sharedMaterial;
+							}
 							currentObjectsMeshRenderer.material = defaultGridPointMaterial;
 						}
 					}

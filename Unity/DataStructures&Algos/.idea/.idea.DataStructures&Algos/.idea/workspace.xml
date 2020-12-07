@@ -20,13 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="841c370a-51dd-4019-90b3-3c4802ff7cd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataStructures&amp;Algos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MinecraftClone (Procedural mesh gen)/Scripts/Lib/VectorExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MinecraftClone (Procedural mesh gen)/Scripts/Lib/VectorExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/Pathfinding.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/Pathfinding.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/Scripts/AStarLib.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/Scripts/AStarLib.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/Scripts/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/Scripts/EnemyMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/CustomizableGameGrid/Scripts/Grid2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/CustomizableGameGrid/Scripts/Grid2D.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +82,7 @@
         <option value="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/Scripts/AStarLib.cs" />
         <option value="$PROJECT_DIR$/Assets/MinecraftClone (Procedural mesh gen)/Scripts/Lib/VectorExtensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/Scripts/EnemyMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Other algos (Binary Tree, Pathfinding)/Pathfinding/CustomizableGameGrid/Scripts/Grid2D.cs" />
       </list>
     </option>
   </component>
@@ -150,7 +147,8 @@
       <workItem from="1606834197741" duration="3357000" />
       <workItem from="1606905481393" duration="12559000" />
       <workItem from="1606999880246" duration="6625000" />
-      <workItem from="1607074784248" duration="11868000" />
+      <workItem from="1607074784248" duration="11869000" />
+      <workItem from="1607341144677" duration="1088000" />
     </task>
     <servers />
   </component>
